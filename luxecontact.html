@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bridal Luxe</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		html,body{
+			overflow-x: hidden;
+		}
+		body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: rgba(0, 0, 0, 0.7);
+
+
+}
+.imaging{
+	width: 60%;
+	margin-top: -90px;
+	margin-left: 10px;
+
+}
+.imaging img{
+	width: 100%;
+	height: 620px;
+	object-fit: cover;
+	border-radius: 30px;
+}
+
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	
+}
+
+
+.nav-links{
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+	
+}
+.nav-links a{
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	color: white;
+}
+.nav-links a:hover{
+	color: #ff6f61;
+	transition: color 0.3s ease-in-out;
+}
+.nav-links a.active{
+	color:orange;
+	border-bottom: 2px solid white;
+}
+.begin{
+	text-align: center;
+	font-size: 70px;
+	color: white;
+	margin-top: 5%;
+}
+.symbol p{
+	color: white;
+	 font-size: 50px;
+	  font-weight: bold; 
+	  margin-bottom: 20px;
+}
+form{
+	display: flex;
+	align-items: center;
+	border-radius: 30px;
+	justify-content: space-between;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	padding: 30px;
+	border: 5px solid white;
+	width: 60%;
+	position: relative;
+	z-index: 2;
+	margin: 30px 10px 20px auto;
+	background-color: black;
+	
+}
+.form-left, .form-right{
+	color: white;
+
+}
+form .form-left input, .form-left textarea{
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid white;
+}
+
+form .form-left label{
+	display: block;
+	margin-bottom: 20px;
+	font-size: 30px;
+
+}
+form .form-left h2{
+	font-size: 40px;
+	font-weight: bold;
+}
+form .form-left button{
+	font-size: 15px;
+	padding: 5px;
+	color: white;
+	border:2px solid white ;
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #007bff;
+}
+form .form-left button:hover{
+	background-color: #0056b3;
+}
+.form-right{
+	color: white;
+}
+.form-right h3{
+font-size: 40px;
+margin-bottom: 20px;
+font-weight: bold;
+}
+.form-right p{
+	font-size: 30px;
+	margin-bottom: 60px;
+}
+	.social{
+		display: flex;
+		justify-content: center;
+	}
+	.social li{
+		list-style-type: none;
+	}
+	.social li a{
+		margin-left: 10px;
+	}
+	.faq-accordion{
+			width: 100%;
+		}
+		.faq-accordion label:hover{
+			background-color: teal;
+		}
+		.faq-question input[type="checkbox"]{
+			display: none;
+		}
+		
+		.faq-question label{
+			display: block;
+			padding: 10px;
+			border: 1px solid black;
+			cursor: pointer;
+			font-size: 25px;
+			color: white;
+		}
+		.faq-answer{
+			display: none;
+			font-size: 25px;
+			color: mintcream;
+		}
+		.faq-question input:checked + label+.faq-answer{
+			display: block;
+		}
+		body.dark-mode{
+			background-color: #333;
+			color: #f2f2f2;
+		}
+		.navbar button{
+	font-size: 13px;
+	padding: 7px 7px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background-color: #ff6f61;
+	transition: 0.3s ease;
+		}
+		.navbar button:hover{
+			background-color: #e65a50;
+		}
+			.ending{
+		text-align: center;
+		color: darkgrey;
+		border-top: 2px solid #151515;
+		margin-top: 10%;
+		padding: 0 2%;
+		background-color:#202020 ;
+	
+	}
+	.ending h1{
+		text-transform: uppercase;
+	font-weight: bold;
+	font-size: 70px;
+	letter-spacing: 10px;
+
+	}
+	.ending .info{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.ending .info .block{
+		width: 32%;
+	}
+	.ending h2{
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+		.copyright{
+		text-align: left;
+		font-size: 18px;
+
+	}
+	@media screen and (max-width: 1279px) and (min-width:769px){
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+
+ 	}
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 5%;
+ 		
+ 		
+ 	}
+ 	.nav-links a{
+ 		font-size: 20px;
+ 	}
+ 	
+.begin{
+	
+	font-size: 50px;
+}
+form .form-left label{
+	
+	font-size: 25px;
+
+}
+form .form-left h2{
+	font-size: 30px;
+}
+form .form-left button{
+	font-size: 13px;
+	padding: 4px;
+	}
+.form-right h3{
+font-size: 30px;
+}
+.form-right p{
+	font-size: 25px;
+	
+}
+form{
+	width: 75%;
+}
+.imaging{
+	width: 75%;
+}
+.symbol p{
+	font-size: 35px;
+}
+
+		.faq-question label{
+			font-size: 20px;
+		}
+		.faq-answer{
+			font-size: 20px;
+		}
+
+ 	.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+
+ }
+ @media screen and (max-width: 768px) and (min-width:481px){
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+    }
+    
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 3%;
+ 		gap: 10px;
+ 	}
+ 	.nav-links a{
+ 		font-size: 14px;
+ 		
+ 	}
+ 	.navbar button {
+ 		font-size: 11px;
+ 		padding: 5px 6px;
+ 	}
+ 	.begin{
+	
+	font-size: 45px;
+}
+form .form-left label{
+	
+	font-size: 20px;
+
+}
+form .form-left h2{
+	font-size: 20px;
+}
+form .form-left button{
+	font-size: 12px;
+	padding: 2px;
+	}
+	.form-right h3{
+font-size: 20px;
+}
+.form-right p{
+	font-size: 20px;
+	
+}
+
+.imaging{
+	width: 80%;
+	margin: -20px 10% 0 10%;
+}
+form{
+	flex-direction: column;
+	padding: 20px;
+	align-items: flex-start;
+	width: 80%;
+	margin: 30px 10% 20px 10%;
+	background-color: black;
+
+}
+.faq-question label{
+			font-size: 18px;
+		}
+		.faq-answer{
+			font-size: 18px;
+		}
+		.symbol p{
+	font-size: 35px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+	.ending h1{
+	font-size: 45px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 27px;
+	}
+	.ending p{
+		font-size: 20px;
+
+	}
+
+ }
+
+ @media screen and (max-width: 480px){
+ 	.navbar{
+    	flex-direction: column;
+    } 
+   
+    .navbar button{
+	font-size: 10px;
+	padding: 4px 6px;
+		}
+.nav-links{
+	gap: 10px;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+}
+.nav-links.open{
+	height: auto;
+}
+.nav-links a{
+	font-size: 14px;
+}
+.navbar button{
+	font-size: 10px;
+	padding: 2px 3px;
+	width: 70px;
+	margin: 0 auto;
+	
+	}
+	.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+	}
+
+.begin{
+	font-size: 30px;
+	text-align: left;
+}
+form .form-left label{
+	
+	font-size: 16px;
+
+}
+form .form-left h2{
+	font-size: 16px;
+}
+form .form-left button{
+	font-size: 10px;
+	padding: 2px;
+	}
+	.form-right h3{
+font-size: 16px;
+}
+.form-right p{
+	font-size: 16px;
+	
+}
+
+.imaging{
+	width: 80%;
+	margin: -20px 10% 0 10%;
+}
+form{
+	flex-direction: column;
+	padding: 20px;
+	align-items: flex-start;
+	width: 80%;
+	margin: 30px 10% 20px 10%;
+}
+.faq-question label{
+			font-size: 16px;
+		}
+		.faq-answer{
+			font-size: 16px;
+		}
+		.symbol p{
+	font-size: 27px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+	.ending h1{
+	font-size: 40px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 20px;
+	}
+	.ending p{
+		font-size: 15px;
+
+	}
+
+ }
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
+		<div class="hamburger"></div>
+		<ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="luxeabout.html">About</a></li>
+		<li><a href="luxeproject.html">project/portfolio</a></li>
+		<li><a href="luxecontact.html" class="active">contact</a></li>
+		<button id="dark-mode-toggle">Dark Mode</button>
+
+		</ul>
+	</nav>
+	
+</header>
+
+<div class="begin">Get In Touch !!!</div>
+
+
+	<form>
+		 <div class="form-left">
+		 	<h2>Reach Out</h2>
+		 	<label for="name">Name:</label>
+		 	<input type="text" id="name" required placeholder="Enter your name">
+		 	<label for="email">Email:</label>
+		 	<input type="email" id="email" required placeholder="Enter a valid Email">
+		 	<label for="message">Message:</label>
+		 	<textarea id="message" required placeholder="Enter your message"></textarea>
+		 	<button type="submit">Submit</button>
+		 </div>
+		 <div class="form-right">
+		 	<h3>Contact Us</h3>
+		 	<p><strong>ifeoma@gmail.com</strong></p>
+
+		 	<h3>Based In</h3>
+		 	<p>Victoria Island Lagos</p>
+		 	<div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
+					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
+
+		 </div>
+	</form>
+	<div class="imaging">
+		<img src="images/luxe34.jpg" alt="Bl images">
+	</div>
+	<div class="symbol"><p>FAQs:</p>
+</div>
+	<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question1"> <label for="question1">Q:What type of wedding gown do you offer?</label> <div class="faq-answer"> <p>We offer a wide range of wedding gowns ranging from different design, fabrics and lace to fits every bride unique taste and style. </p></div>
+	</div>
+	
+		<div class="faq-question">
+		<input type="checkbox" id="question2"> <label for="question2">Q:How far in advance should i order my wedding gown?</label> <div class="faq-answer"> <p>We advice you place your order at least 6 to 9 months before your wedding date to create more time for delivery and alterations.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question3"> <label for="question3">Q:Can i customize my wedding gown?</label> <div class="faq-answer"> <p>Yes, we offer customization services on your wedding gown.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question4"> <label for="question4">Q:What is the price range of your wedding gown?</label> <div class="faq-answer"> <p>Our price range ranges from $15,000 and above its all depending on the fabric, style and intricacy of design.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question5"> <label for="question5">Q:Do you offer alterations and fitting?</label> <div class="faq-answer"> <p>Yes we offer alterations and fittings to fit your body perfectly.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question6"> <label for="question6">Q:Can i return or exchange our wedding gown?</label> <div class="faq-answer"> <p>Yes, you can but it will be based on our terms and conditions.</p></div>
+	</div>
+		<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question7"> <label for="question7">Q:How do i care for my wedding gown after the wedding?</label> <div class="faq-answer"> <p>We recommend professional cleaning and preservation to enable your wedding gown look it best. you can contact us for recommendation.</p></div>
+	</div>
+		<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question8"> <label for="question8">Q:Do you offer wedding veils and accessories?</label> <div class="faq-answer"> <p>Yes, we offer wedding veils and accessories. </p></div>
+	</div>
+		<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question9"> <label for="question9">Q:Can i schedule an appointment to try on my wedding dress?</label> <div class="faq-answer"> <p>Yes you can</p></div>
+	</div>
+		<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question10"> <label for="question10">Q:Do you ship wedding gowns internationally?</label> <div class="faq-answer"> <p>Yes we ship gown internationally please contact us for international shipping procedures and rates.</p></div>
+	</div>
+	<div class="ending">
+	<h1>bridal luxe</h1>
+		<div class="info">
+		<div class="block"><h2>explore</h2><p>Wedding Dresses</p> <p>Real Brides</p> <p> Our Collections</p></div>
+		<div class="block"> <h2>contact us </h2><p>Get In Touch </p> <p>08000000000 </p> <p>0900000000(Whatsapp) </p> <p>ifeomaring@gmail.com </p> <p> Victoria Island, Lagos</p></div>
+		<div class="block"><h2>	join the bridal squad</h2> <p>Exclusive moments</p> <p> from our special day </p> <div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
+					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
+	</div>
+	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
+
+
+<script type="text/javascript" src="bridal.js"></script>
+<script type="text/javascript" src="darkmode.js"></script>
+</body>
+</html>

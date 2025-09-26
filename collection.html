@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bridal Luxe Collections</title>
+	<style>
+	*{
+			box-sizing: border-box;
+		}
+	html,body{
+			overflow-x: hidden;
+		}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom,grey, mintcream) ;
+}
+body.dark-mode{
+			background:linear-gradient(to bottom, #333333, #555555);
+			color: #f2f2f2;
+		}
+	.navbar button{
+	font-size: 13px;
+	padding: 7px 7px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background-color: #ff6f61;
+	transition: 0.3s ease;
+		}
+	.navbar button:hover{
+			background-color: #e65a50;
+		}
+	.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	
+	
+}
+
+
+.nav-links{
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+	
+}
+.nav-links a{
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:  #ffd700;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+}
+.nav-links a:hover{
+	color: #ff6ff1;
+}
+.clipimage{
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100% ,0% 50%);
+	width: 30%;
+	height: 400px;
+	background-position: center;
+	background-size: cover;
+}
+.naming{
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+
+	color: white;
+	text-shadow: 0 0 5px;
+	padding: 0 2%;
+}
+.imagery{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin: 0 5%;
+
+}
+.collection{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 96%;
+	margin: 0 2%;
+
+}
+.collection .imaging{
+	width: 32%;
+	text-align: center;
+	
+}
+.collection .imaging img{
+	width: 100%;
+	object-fit:cover ;
+	height: 400px;
+}
+.collection .imaging .description{
+	font-size: 18px;
+	color: #ffc67d;
+
+}
+.collection .imaging .price{
+	color: #ffd700;
+	font-weight: bold;
+	font-size: 20px;
+}
+	.ending{
+		text-align: center;
+		color: darkgrey;
+		border-top: 2px solid #151515;
+		margin-top: 20%;
+		padding: 0 2%;
+		background-color:#202020 ;
+	
+	}
+	.ending h1{
+		text-transform: uppercase;
+	font-weight: bold;
+	font-size: 70px;
+	letter-spacing: 10px;
+
+	}
+	.ending .info{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.ending .info .block{
+		width: 32%;
+	}
+	.ending h2{
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.social{
+		display: flex;
+		justify-content: center;
+	}
+	.ending p{
+		font-size: 25px;
+
+	}
+
+	.ending .info .social li{
+		list-style-type: none;
+		margin-left: 20px;
+
+	}
+
+	.copyright{
+		text-align: left;
+		font-size: 18px;
+
+	}
+	@media screen and (max-width: 1279px) and (min-width:769px){
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+
+ 	}
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 5%;
+ 		
+ 		
+ 	}
+ 	.nav-links a{
+ 		font-size: 20px;
+ 	}
+ 	 	 	.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+ 	.naming{
+	font-size: 25px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+ }
+ @media screen and (max-width: 768px) and (min-width:481px){
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+    }
+    
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 3%;
+ 		gap: 10px;
+ 	}
+ 	.nav-links a{
+ 		font-size: 14px;
+ 		
+ 	}
+ 	.navbar button {
+ 		font-size: 11px;
+ 		padding: 5px 6px;
+ 	}
+ 	.clipimage{
+	height: 200px;
+}
+
+.imagery{
+	display: flex;
+	justify-content: center;
+	width: 96%;
+	margin: 0 2%;
+
+}
+.naming{
+	font-size: 23px;
+}
+.collection .imaging{
+	width: 48%;	
+}
+
+.collection .imaging img{
+	height: 270px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+	.ending h1{
+	font-size: 45px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 27px;
+	}
+	.ending p{
+		font-size: 20px;
+
+	}
+
+
+ }
+
+ 	@media screen and (max-width: 480px){
+      	.navbar{
+    	flex-direction: column;
+    } 
+   
+    .navbar button{
+	font-size: 10px;
+	padding: 4px 6px;
+		}
+.nav-links{
+	gap: 10px;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+}
+.nav-links.open{
+	height: auto;
+}
+.nav-links a{
+	font-size: 14px;
+}
+.navbar button{
+	font-size: 10px;
+	padding: 2px 3px;
+	width: 70px;
+	margin: 0 auto;
+	
+	}
+	.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+	}
+	.clipimage{
+	height: 180px;
+}
+
+.imagery{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+
+}
+.naming{
+	font-size: 18px;
+}
+.collection .imaging{
+	width: 48%;	
+}
+
+.collection .imaging img{
+	height: 180px;
+}
+.collection .imaging .description{
+	font-size: 13px;
+
+}
+.collection .imaging .price{
+	color: #ffd700;
+	font-weight: bold;
+	font-size: 14px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+	.ending h1{
+	font-size: 40px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 20px;
+	}
+	.ending p{
+		font-size: 15px;
+
+	}
+
+}
+
+
+</style>
+</head>
+<body>
+	<header>
+	<nav class="navbar">
+		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
+				<div class="hamburger"></div>
+		<ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="luxeabout.html">About</a></li>
+		<li><a href="luxeproject.html">project/portfolio</a></li>
+		<li><a href="luxecontact.html">contact</a></li>
+		<button id="dark-mode-toggle">Dark Mode</button>
+		</ul>
+	</nav>
+</header>
+	<div class="imagery">
+
+	<div class="clipimage" style="background-image: url(images/luxe2.jpg);"></div>
+	<div class="clipimage" style="background-image: url(images/luxe28.jpg);"></div>
+	<div class="clipimage" style="background-image: url(images/luxe30.jpg);"></div>
+</div>
+<div class="naming">bridal luxe ball collection</div>
+<div class="collection">
+	<div class="imaging"><img src="images/luxe1.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$39,000.00</p></div>
+	<div class="imaging"><img src="images/luxe14.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$49,000.00</p></div>
+	<div class="imaging"><img src="images/luxe5.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$20,000.00</p></div>
+	<div class="imaging"><img src="images/luxe11.webp"> <p class="description">stylish and Classy</p> <p class="price">$19,000.00</p></div>
+	<div class="imaging"><img src="images/luxe20.jpeg"> <p class="description">Sophisticated and Classy</p> <p class="price">$29,000.00</p></div>
+	<div class="imaging"><img src="images/luxe17.jpg"> <p class="description">Elegant and Bold</p> <p class="price">$39,000.00</p></div>
+	
+</div>
+<div class="naming" style=" margin-top: 20px;"> bridal luxe slim fit collection</div>
+<div class="collection">
+	<div class="imaging"><img src="images/luxe3.webp"> <p class="description">Elegant and Classy</p> <p class="price">$25,000.00</p></div>
+	<div class="imaging"><img src="images/luxe4.webp"> <p class="description">Elegant and Classy</p> <p class="price">$26,000.00</p></div>
+	<div class="imaging"><img src="images/luxe6.webp"> <p class="description">Elegant and Classy</p> <p class="price">$19,000.00</p></div>
+	<div class="imaging"><img src="images/luxe7.webp"> <p class="description">stylish and Classy</p> <p class="price">$29,000.00</p></div>
+	<div class="imaging"><img src="images/luxe9.webp"> <p class="description">Sophisticated and Classy</p> <p class="price">$49,000.00</p></div>
+	<div class="imaging"><img src="images/luxe10.webp"> <p class="description">Elegant and Bold</p> <p class="price">$24,000.00</p></div>
+	<div class="imaging"><img src="images/luxe18.jpeg"> <p class="description">Elegant and Bold</p> <p class="price">$25,000.00</p></div>
+	<div class="imaging"><img src="images/luxe30.jpg"> <p class="description">Elegant and Bold</p> <p class="price">$26,000.00</p></div>
+	<div class="imaging"><img src="images/luxe12.webp"> <p class="description">Elegant and Bold</p> <p class="price">$30,000.00</p></div>
+	</div>
+	<div class="ending">
+	<h1>bridal luxe</h1>
+		<div class="info">
+		<div class="block"><h2>explore</h2><p>Wedding Dresses</p> <p>Real Brides</p> <p> Our Collections</p></div>
+		<div class="block"> <h2>contact us </h2><p>Get In Touch </p> <p>0800000000 </p> <p>090000000(Whatsapp) </p> <p>ifeomaring@gmail.com </p> <p> Victoria Island, Lagos</p></div>
+		<div class="block"><h2>	join the bridal squad</h2> <p>Exclusive moments</p> <p> from our special day </p> <div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
+					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
+	</div>
+	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
+
+			<script src="bridal.js">
+	</script>
+	<script type="text/javascript" src="darkmode.js"></script>
+</body>
+</html>

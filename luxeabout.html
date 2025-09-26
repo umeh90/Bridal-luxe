@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bridal Luxe</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		html,body{
+			overflow-x: hidden;
+		}
+		body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+:root{
+	--primary-color:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));;
+}
+header{
+	background: var(--primary-color);
+}
+.begin{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 400px;
+	background: var(--primary-color);
+	top: 0;
+}
+body.dark-mode{
+			background-color: #333;
+			color: #f2f2f2;
+		}
+		.navbar button{
+	font-size: 13px;
+	padding: 7px 7px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background-color: #ff6f61;
+	transition: 0.3s ease;
+		}
+		.navbar button:hover{
+			background-color: #e65a50;
+		}
+.begin .imagery{
+	width: 40%;
+	height: 100%;
+}
+.begin .imagery img{
+	width: 95%;
+	height: 90%;
+	object-fit: cover;
+
+}
+.begin .texting{
+	height: 100%;
+	width: 60%;
+}
+.begin .texting h1{
+	font-weight: bold;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-shadow: 0 0 3px;
+	color: white;
+	margin-left: 5px;
+
+}
+.begin .texting p{
+	font-size: 25px;
+	color: white;
+	margin-left: 5px;
+
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+}
+
+
+.nav-links{
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+	
+}
+.nav-links a{
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: white;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+}
+.nav-links a:hover{
+	color: #ff6f61;
+	transition: color 0.3s ease-in-out;
+}
+.nav-links a.active{
+	color:orange;
+	border-bottom: 2px solid white;
+}
+.content{
+	display: grid;
+	width: 90%;
+	margin: 0 5%;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: minmax(400px, auto);
+	grid-gap: 10px;
+	margin-top: 40px;
+}
+.content img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.content h3{
+	font-size: 30px;
+	color: var(--primary-color);
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 40px;
+}
+.content p{
+	font-size: 25px;
+	color: var(--primary-color);
+}
+.content .one{
+	grid-column: 1/4;
+}
+.content .two{
+	grid-column: 4/7;
+}
+.content .three{
+	grid-column: 1/4;
+}
+.content .four{
+	grid-column: 4/7;
+}
+.content .five{
+	grid-column: 1/4;
+}
+.content .six{
+	grid-column: 4/7;
+}
+	.ending{
+		text-align: center;
+		color: darkgrey;
+		border-top: 2px solid #151515;
+		margin-top: 5%;
+		padding: 0 2%;
+		background-color:#202020 ;
+	
+	}
+	.ending h1{
+		text-transform: uppercase;
+	font-weight: bold;
+	font-size: 70px;
+	letter-spacing: 10px;
+
+	}
+	.ending .info{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.ending .info .block{
+		width: 32%;
+	}
+	.ending h2{
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.social{
+		display: flex;
+		justify-content: center;
+	}
+	.ending p{
+		font-size: 25px;
+
+	}
+
+	.ending .info .social li{
+		list-style-type: none;
+		margin-left: 20px;
+
+	}
+
+	.copyright{
+		text-align: left;
+		font-size: 18px;
+
+	}
+	.explore{
+		text-align: center;
+		margin-top: 5%;
+		animation: pulse 2s infinite;
+
+	}
+	@keyframes pulse{
+		0%{
+			transform: scale(1);
+		}
+		50%{
+			transform: scale(1.1);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}
+
+	 .explore a{
+	
+	text-decoration: none;
+	color: var(--primary-color);
+	font-size: 15px;
+	padding: 6px 6px;
+	border: 2px solid rgba(0, 0, 0, 0.7);
+	text-transform: uppercase;
+	transition: background-color 0.5s ease-in-out;
+	text-align: center;
+
+}
+.explore a:hover{
+	background-color:#ff6f61 ;
+}
+@media screen and (max-width: 1279px) and (min-width:769px){
+.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+
+ 	}.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 5%;
+ 		
+ 		
+ 	}
+ 	.nav-links a{
+ 		font-size: 20px;
+ 	}
+ 	.begin .texting h1{
+	font-size: 30px;
+}
+.begin .texting p{
+	font-size: 20px;
+}
+.begin .imagery img{
+	width: 99%;
+	height: 75%;
+
+}
+
+.begin .imagery{
+	width: 57%;
+}
+.begin .texting{
+	width: 43%;
+}
+.content{
+	width: 96%;
+	margin: 0 2%;
+}
+
+.content h3{
+	font-size: 25px;
+	padding-top: 10px;
+}
+.content p{
+	font-size: 20px;
+}
+.content .five img{
+	height: 485px !important;
+}
+ .explore a{
+	
+	font-size: 10px;
+	padding: 5px 5px;
+
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+
+
+
+}
+@media screen and (max-width: 768px) and (min-width:481px) {
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+    }
+    
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 3%;
+ 		gap: 10px;
+ 	}
+ 	.nav-links a{
+ 		font-size: 14px;
+ 		
+ 	}
+ 	.navbar button {
+ 		font-size: 11px;
+ 		padding: 5px 6px;
+ 	}
+
+.begin .texting h1{
+	font-size: 28px;
+}
+.begin .texting p{
+	font-size: 16px;
+}
+.begin .imagery img{
+	width: 100%;
+	object-fit: contain;
+	height: 95%;
+
+}
+.begin{
+	height: 300px;
+}
+
+.begin .imagery{
+	width: 50%;
+}
+.begin .texting{
+	width: 50%;
+}
+.content{
+	width: 98%;
+	margin: 0 1%;
+}
+
+.content h3{
+	font-size: 20px;
+	padding-top: 6px;
+}
+.content p{
+	font-size: 17px;
+}
+
+.content .one img,
+.content .four img{
+	height: 350px !important;
+}
+.content .five img{
+	height: 400px !important;
+}
+.explore a{
+	
+	font-size: 10px;
+	padding: 5px 5px;
+
+}
+.six h3{
+	font-size: 17px;
+}
+.six p{
+	font-size: 14.7px;
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+	.ending h1{
+	font-size: 45px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 27px;
+	}
+	.ending p{
+		font-size: 20px;
+
+	}
+}
+
+@media screen and (max-width:480px){
+	.navbar{
+    	flex-direction: column;
+    } 
+   
+    .navbar button{
+	font-size: 10px;
+	padding: 4px 6px;
+		}
+.nav-links{
+	gap: 10px;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+}
+.nav-links.open{
+	height: auto;
+}
+.nav-links a{
+	font-size: 14px;
+}
+.navbar button{
+	font-size: 10px;
+	padding: 2px 3px;
+	width: 70px;
+	margin: 0 auto;
+	
+	}
+	.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+	}
+	.begin .texting h1{
+	font-size: 17px;
+}
+.begin .texting p{
+	font-size: 11px;
+}
+.begin .imagery img{
+	width: 100%;
+	object-fit: contain;
+	height: 95%;
+
+}
+.begin{
+	height: 180px;
+}
+
+.begin .imagery{
+	width: 50%;
+}
+.begin .texting{
+	width: 50%;
+}
+.content{
+	width: 100%;
+	margin: 0;
+}
+
+.content h3{
+	font-size: 17px;
+	padding-top: 6px;
+}
+.content p{
+	font-size: 11px;
+}
+
+.content .one img,
+.content .four img{
+	height: 200px !important;
+}
+.content .five img{
+	height: 300px !important;
+}
+.content{
+	grid-auto-rows: minmax(200px, auto);
+}
+.six h3{
+	font-size: 13px;
+}
+.six p{
+	font-size: 11px;
+}
+
+
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 100%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+		font-size: 15px;
+	}
+	.explore a{
+		font-size: 10px;
+	}
+	.ending h1{
+	font-size: 35px;
+	letter-spacing: 5px;
+
+	}
+	.ending h2{
+		font-size: 20px;
+	}
+	.ending p{
+		font-size: 15px;
+
+	}
+}
+</style>
+
+</head>
+<body>
+	<header>
+	<nav class="navbar">
+		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
+		<div class="hamburger"></div>
+		<ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="luxeabout.html" class="active">About</a></li>
+		<li><a href="luxeproject.html">project/portfolio</a></li>
+		<li><a href="luxecontact.html">contact</a></li>
+				<button id="dark-mode-toggle">Dark Mode</button>
+		</ul>
+		</nav>
+	</header>
+
+	<div class="begin">
+		<div class="texting"><h1>about us</h1><p>Welcome to Bridal Luxe! where elegancee meets perfection. we are passionate about creating stunning and bespoke gowns that make every bride feel like a princess. with a keen eye for detail, dedication and excepptional quality. we are dedicated to help you find your dream wedding gown.</p></div>
+		<div class="imagery"><img src="images/design2.jpg" alt="profile image"> </div>
+	</div>
+
+	<div class="content">
+		<div class="one"><img src="images/luxe21.jpg" alt="Bl gowm"> </div>
+		<div class="two"><h3>our story</h3><p>The Bridal Luxe came into existence as a result of our mission to make beautiful women feel more pretty of their special day. our love for creating exquisite bridal gowns is deeply rooted in celebrating individuality and love and so far, we have delivered stunning gowns that made brides feel like royalty</p></div>
+		<div class="three"><h3>mission & vision</h3><p>At Bridal Luxe our mission is to empower to unleash their uniqueness and stand out on their spcial day. we are dedicated to creating exquisite and bespoke wedding dresses. <br> Our vision is to become the go-to-destination for brides seeking one of kind, handcrafed wedding gowns that reflect thir individuality and style.</p></div>
+		<div class="four"> <img src="images/luxe24.jpg" alt="Bl gowm" style="height: 400px;"></div>
+		<div class="five"><img src="images/luxe22.jpg" alt="Bl gowm" style="height: 550px;"></div>
+		<div class="six"><h3 style="padding-top: 10px;">expertise & services</h3><p>As a renowned expert in world of bridal fashion, we bring an undeniable creativity and attention to detail to every single piece we craft. with years of experience, we craft exquisite, bespoke wedding gowns that make every bride feel confident and beautful. We therefore, offer services like:
+		<ul>
+			<li><p>Bespoke Design</p></li>
+			<li><p>Personalised Consultation</p></li>
+			<li><p>Expert fittings and Alterations</p></li>
+			<li><p>Sustainable Options</p></li>
+			<li><p>Preservation and Restoration</p></li>
+		</ul>   </p></div>
+	</div>
+	<div class="explore">
+
+	<a href="collection.html">view our collections</a>
+</div>
+
+    <div class="ending">
+	<h1>bridal luxe</h1>
+		<div class="info">
+		<div class="block"><h2>explore</h2><p>Wedding Dresses</p> <p>Real Brides</p> <p> Our Collections</p></div>
+		<div class="block"> <h2>contact us </h2><p>Get In Touch </p> <p>0800000000 </p> <p>0900000000(Whatsapp) </p> <p>ifeomaring@gmail.com </p> <p> Victoria Island, Lagos</p></div>
+		<div class="block"><h2>	join the bridal squad</h2> <p>Exclusive moments</p> <p> from our special day </p> <div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
+					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
+	</div>
+	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
+
+			<script src="bridal.js">
+	</script>
+	<script type="text/javascript" src="darkmode.js"></script>
+
+	
+
+
+
+
+</body>
+</html>

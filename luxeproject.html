@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bridal Luxe</title>
+	<style>
+	*{
+			box-sizing: border-box;
+		}
+		html,body{
+			overflow-x: hidden;
+		}
+		body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+
+}
+body.dark-mode{
+			background-color: #333;
+			color: #f2f2f2;
+		}
+		.navbar button{
+	font-size: 13px;
+	padding: 7px 7px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background-color: #ff6f61;
+	transition: 0.3s ease;
+		}
+		.navbar button:hover{
+			background-color: #e65a50;
+		}
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	background-color: mintcream;
+}
+
+
+.nav-links{
+	list-style-type: none;
+	display: flex;
+	gap: 30px;
+	
+}
+.nav-links a{
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	color: sandybrown;
+}
+.nav-links a:hover{
+	color: #ff6f61;
+	transition: color 0.3s ease-in-out;
+}
+.nav-links a.active{
+	color:orange;
+	border-bottom: 2px solid gold;
+}
+.video-container{
+	position: relative;
+	margin: 0;
+	width: 100%;
+	height: 530px;
+}
+.video-container video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.writeup{
+	position: absolute;
+	top: 10%;
+	left: 0;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: left;
+	animation: fadein 3s ease-in forwards;
+	padding: 0 1%;
+	text-shadow: 0 0 5px;
+}
+#text2{
+	font-size: 40px;
+}
+@keyframes fadein{
+	0%{
+		opacity: 0;
+	transform: translateY(20px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.project{
+	border: 1px solid #fafafa;
+	background-color: #fafafa;
+	padding: 20px;
+	text-align: center;
+	color: #1a3d5d ;
+
+}
+.project h1{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.project p{
+	font-size: 30px;
+}
+.showcase{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 5%;
+	background-color: #fafafa;
+	align-items: flex-start;
+}
+
+.display{
+	width: 30%;
+	background: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	text-align: center;
+	position: relative;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.display:hover{
+	transform: translateY(-15px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.display img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.display h1{
+	text-align: center;
+	font-size: 25px;
+	
+}
+.original{
+	font-size: 1.2em;
+	color: #202020;
+	display: inline;
+}
+.extra{
+	font-size: 1.2em;
+	color: #202020;
+	display: none;
+	text-align: center;
+
+}
+input[type="checkbox"]{
+	height: 1.2em;
+	display: block;
+	appearance: none;
+}
+label{
+	position: relative;
+	color: black;
+	cursor: pointer;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+label:before{
+	content: "Read More..";
+}
+input[type="checkbox"]:checked ~ label:before{
+	content: "Read Less";
+}
+.dots{
+	font-size: 1.2em;
+}
+.dots:has(~ input[type="checkbox"]:checked){
+	display: none;
+}
+.extra:has(~ input[type="checkbox"]:checked){
+	display: block;
+}
+.ending{
+		text-align: center;
+		color: darkgrey;
+		border-top: 2px solid #151515;
+		margin-top: 10%;
+		padding: 0 2%;
+		background-color:#202020 ;
+	
+	}
+	.ending h1{
+		text-transform: uppercase;
+	font-weight: bold;
+	font-size: 70px;
+	letter-spacing: 10px;
+
+	}
+	.ending .info{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.ending .info .block{
+		width: 32%;
+	}
+	.ending h2{
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.social{
+		display: flex;
+		justify-content: center;
+	}
+	.ending p{
+		font-size: 25px;
+
+	}
+
+	.ending .info .social li{
+		list-style-type: none;
+		margin-left: 20px;
+
+	}
+
+	.copyright{
+		text-align: left;
+		font-size: 18px;
+	}
+@media screen and (max-width: 1279px) and (min-width:769px){
+	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+
+ 	}
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 5%;
+ 		
+ 		
+ 	}
+ 	.nav-links a{
+ 		font-size: 20px;
+ 	}
+ 	.writeup{
+ 		top: 30%;
+ 		left: 30%;
+	font-size: 40px;
+	text-align: center
+}
+#text2{
+	font-size: 32px;
+}
+.project h1{
+	font-size: 18px;
+}
+.project p{
+	font-size: 25px;
+}
+.showcase{
+	width: 98%;
+	margin: 0 1%;
+
+}
+.display{
+	width: 49%;
+}
+
+.original{
+	font-size: 1em;
+}
+.extra{
+	font-size: 1em;
+
+}
+.display h1{
+	font-size: 22px;
+	
+}
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+	}
+
+}
+@media screen and (max-width: 768px) and (min-width:481px){
+ 	.navbar{
+ 		flex-direction: column;
+ 		text-align: center;
+ 		padding: 10px 0;
+    }
+    
+ 	.nav-links{
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 		padding: 0 3%;
+ 		gap: 10px;
+ 	}
+ 	.nav-links a{
+ 		font-size: 14px;
+ 		
+ 	}
+ 	.navbar button {
+ 		font-size: 11px;
+ 		padding: 5px 6px;
+ 	}
+ 	.video-container{
+	height: 400px;
+}
+ 	.writeup{
+ 		top: 20%;
+ 		left: 30%;
+	font-size: 30px;
+	text-align: center
+}
+#text2{
+	font-size: 26px;
+}
+.project h1{
+	font-size: 17px;
+}
+.project p{
+	font-size: 23px;
+}
+.showcase{
+	width: 98%;
+	margin: 0 1%;
+
+}
+.display{
+	width: 49%;
+}
+.display h1{
+	text-align: center;
+	font-size: 16px;
+	
+}
+.original{
+	font-size: 1em;
+}
+.extra{
+	font-size: 1em;
+}
+input[type="checkbox"]{
+	height: 1em;
+}
+label{
+	font-size: 1em;
+}
+#text1{
+	font-size: 0.9em;
+}
+
+
+.ending .info{
+		display: flex;
+		flex-direction: column;
+
+	}
+.ending .info .block{
+		width: 96%;
+	}
+	.copyright{
+		margin-top: 30px;
+		text-align: center;
+		font-size: 18px;
+	}
+	.ending h2{
+		font-size: 27px;
+	}
+	.ending p{
+		font-size: 20px;
+
+	}
+	.ending h1{
+	font-size: 50px;
+	letter-spacing: 5px;
+
+	}
+
+ }
+ 	@media screen and (max-width: 480px){
+	.navbar{
+    	flex-direction: column;
+    } 
+   
+    .navbar button{
+	font-size: 10px;
+	padding: 4px 6px;
+		}
+.nav-links{
+	gap: 10px;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+}
+.nav-links.open{
+	height: auto;
+}
+.nav-links a{
+	font-size: 14px;
+}
+.navbar button{
+	font-size: 10px;
+	padding: 2px 3px;
+	width: 70px;
+	margin: 0 auto;
+	
+	}
+	.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+	}
+	.video-container{
+	height: 200px;
+}
+ 	.writeup{
+ 		top: 15%;
+ 		left: 30%;
+	font-size: 20px;
+	text-align: center
+}
+#text2{
+	font-size: 15px;
+}
+.project h1{
+	font-size: 12px;
+}
+.project p{
+	font-size: 15px;
+}
+.showcase{
+	width: 100%;
+	margin: 0;
+}
+
+.display{
+	width: 50%;
+}
+.display img{
+	height: 200px;
+}
+.display h1{
+	font-size: 12px;
+	
+}
+.original{
+	font-size: 0.7em;
+}
+.extra{
+	font-size: 0.7em;
+}
+input[type="checkbox"]{
+	height: 0.7em;
+}
+label{
+	font-size: 0.7em;
+}
+.ending{
+	padding: 0;
+	}
+	.ending h1{
+	font-size: 35px;
+	letter-spacing: 5px;
+
+	}
+	.ending .info{
+		flex-direction: column;
+	}
+	.ending .info .block{
+		width: 100%
+	}
+	.ending h2{
+		font-size: 20px;
+	}
+	.ending p{
+		font-size: 15px;
+
+	}
+
+	.copyright{
+		text-align: center;
+		font-size: 15px;
+	}
+
+
+}
+
+
+
+</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
+		<div class="hamburger"></div>
+		<ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="luxeabout.html">About</a></li>
+		<li><a href="luxeproject.html" class="active">project/portfolio</a></li>
+		<li><a href="luxecontact.html">contact</a></li>
+				<button id="dark-mode-toggle">Dark Mode</button>
+		</ul>
+	</nav>
+</header>
+
+<div class="video-container"><video autoplay muted loop><source src="luxe27.mp4" type="video/mp4"></video> <div class="writeup">BRIDAL LUXE <br> <span id="text2">A <br> Classic <br> Feminine <br> Bridal <br> Clothing</span></div></div>
+
+<div class="project">
+	<h1>showcasing excellence</h1>
+	<p>Dive Into A Curated Selection<br> Of Our Feautured Projects</p>
+</div>
+<div class="showcase">
+	<div class="display">
+		<img src="images/luxe40.webp" alt="Bl gown">
+		<h1>Luxury Bridal Collection</h1>
+		<p class="original">A collection of exquisite, high-end wedding gowns. </p>
+		<span class="dots">...</span>
+		<p class="extra">The Luxury Bridal Collection is crafted for brides who dream of a gown that embodies sophistication, grace, and grandeur. These dresses feature hand-stitched embroidery, delicate lace appliqués, intricate beading, and premium fabrics like silk, satin, and tulle. Designed with dramatic trains, voluminous skirts, and couture-inspired silhouettes, this collection is perfect for those who want to make a bold statement. Whether you prefer a regal ball gown, a sleek mermaid cut, or a vintage-inspired lace dress, our luxury gowns ensure you look breathtaking on your special day. Specially designed for brides who desire elegance, sophistication, and intricate detailing.</p>
+		<input type="checkbox" id="btn">
+		<label for="btn"></label>
+	</div>
+		<div class="display">
+		<img src="images/luxe41.webp" alt="Bl gown">
+		<h1>Minimalist Gown Collection</h1>
+		<p class="original" id="text1">Elegant, modern gowns with clean lines and timeless silhouettes. </p>
+		<span class="dots">...</span>
+		<p class="extra">Our Minimalist Gown Collection is perfect for brides who appreciate simple, refined elegance. These gowns focus on clean cuts, smooth fabrics, and structured silhouettes, emphasizing the bride’s natural beauty without overwhelming embellishments. Crafted from high-quality crepe, satin, and silk, each dress is designed with sleek necklines, subtle draping, and minimalist detailing. Whether you prefer a chic sheath dress, an A-line silhouette, or a sophisticated slip gown, this collection exudes modern romance and effortless charm.</p>
+		<input type="checkbox" id="btn1">
+		<label for="btn1"></label>
+	</div>
+	<div class="display">
+		<img src="images/luxe49.webp" alt="Bl gown">
+		<h1>Short Gown Collection</h1>
+		<p class="original">Modern dresses designed for brides who want a fun, and unconventional look. </p>
+		<span class="dots">...</span>
+		<p class="extra">Not every bride dreams of a long, flowing gown—some prefer a modern, playful, and stylish approach. Our Short Wedding Dress Collection is perfect for intimate weddings, elopements, civil ceremonies, and reception dresses. These dresses feature elegant lace, sleek satin, and flirty tulle skirts in various lengths, from tea-length to mini. Whether you love a vintage-inspired A-line dress, a chic sheath silhouette, or a glamorous cocktail-style gown, our short wedding dresses offer effortless beauty and comfort. Perfect for brides who want to dance the night away while looking stunning!.</p>
+		<input type="checkbox" id="btn2">
+		<label for="btn2"></label>
+
+	</div>
+	<div class="display">
+		<img src="images/luxe42.webp" alt="Bl gown">
+		<h1>Custom-Made Bridal Dresses</h1>
+		<p class="original">Personalized wedding gowns designed specifically to match each bride’s vision and style. </p>
+		<span class="dots">...</span>
+		<p class="extra">Every bride is unique, and so should be her dress. Our Custom-Made Bridal Dresses service allows you to create the gown of your dreams, tailored to your exact preferences. From sketch to final stitch, our expert designers work closely with you to bring your vision to life. Choose from various silhouettes, necklines, fabrics, and embellishments, ensuring a truly one-of-a-kind dress. Whether you desire a contemporary twist, vintage inspiration, or a completely original design, we make sure your gown reflects your personality and love story.</p>
+		<input type="checkbox" id="btn3">
+		<label for="btn3"></label>
+	</div>
+		<div class="display">
+			<img src="images/luxe43.webp" alt="Bl gown">
+			<h1>Vintage-Inspired Gowns</h1>
+		<p class="original">Timeless and rich gowns inspired by classic wedding dress fashion ranging from the 1920s to the 1980s </p>
+		<span class="dots">...</span>
+		<p class="extra">Step back in time with our Vintage-Inspired Bridal Gowns, designed for brides who love the charm of past eras. From Gatsby-style beaded gowns of the 1920s to the puffed sleeves and lace of the 1980s, this collection brings timeless fashion back to life. Featuring delicate lace, pearl accents, soft tulle, and intricate embroidery, these gowns capture the elegance and romance of vintage bridal wear. Whether you’re drawn to old Hollywood glamour, bohemian vibes, or classic Victorian elegance, our vintage gowns will make you feel like a bride from a fairytale.</p>
+		<input type="checkbox" id="btn4">
+		<label for="btn4"></label>
+	</div>
+	<div class="display">
+		<img src="images/luxe44.webp" alt="Bl gown">
+		<h1>Bridal Accessories & Styling</h1>
+		<p class="original">The perfect finishing touches for a bride's wedding day look, from veils to jewelry ranging from earrings and necklace </p>
+		<span class="dots">...</span>
+		<p class="extra">
+			A wedding look is never complete without the right accessories. Our Bridal Accessories & Styling collection includes luxurious veils, delicate tiaras, elegant gloves, and exquisite jewelry pieces that complement any gown. Whether you prefer a cathedral-length veil with lace edging, a sparkling headpiece, or classic pearl earrings, we provide accessories that enhance your bridal beauty. Carefully curated for various wedding styles, our collection ensures you walk down the aisle feeling radiant and confident.
+		</p>
+		
+		<input type="checkbox" id="btn5">
+		<label for="btn5"></label>
+		
+	</div>
+		<div class="display">
+		<img src="images/luxe45.webp" alt="Bl gown">
+		<h1>Plus-Size Bridal Collection</h1>
+		<p class="original">A collection of stunning gowns designed to celebrate every body shape. </p>
+		<span class="dots">...</span>
+		<p class="extra">Every bride deserves to feel beautiful, no matter her size. Our Plus-Size Bridal Collection offers gowns designed specifically to enhance curves, provide comfort, and offer a flattering fit. From structured bodices that offer support to flowing A-line skirts that create an ethereal look, we ensure every bride finds her dream dress. Designed with luxurious fabrics, intricate lacework, and stylish silhouettes, these gowns are tailored for elegance and confidence. Whether you want a dramatic ball gown, a sleek mermaid dress, or a romantic off-the-shoulder design, we have the perfect fit for you.</p>
+		
+		<input type="checkbox" id="btn6">
+		<label for="btn6"></label>
+		
+	</div>
+		<div class="display">
+		<img src="images/luxe46.webp" alt="Bl gown">
+		<h1>Maternity Wedding Gowns</h1>
+		<p class="original"> Beautiful, comfortable wedding gowns designed for expecting brides.</p>
+		<span class="dots">...</span>
+		<p class="extra">Brides-to-be who are also moms-to-be deserve a wedding gown that is both stunning and comfortable. Our Maternity Wedding Gown Collection is designed with soft, stretchy fabrics, empire waistlines, and flowing silhouettes to accommodate a growing belly while maintaining elegance. From boho-inspired chiffon dresses to classic A-line gowns, each piece offers comfort, support, and beauty. Whether you're planning a small intimate ceremony or a grand wedding, these gowns ensure you feel radiant and graceful on your big day.</p>
+		
+		<input type="checkbox" id="btn7">
+		<label for="btn7"></label>
+		
+	</div>
+		<div class="display">
+		<img src="images/luxe47.webp" alt="Bl gown">
+		<h1>Real Brides & Testimonials</h1>
+		<p class="original">Real brides who wore our gowns and their love stories. </p>
+		<span class="dots">...</span>
+		<p class="extra">Nothing is more inspiring than seeing real brides shine on their wedding day. Our Real Brides & Testimonials section features photos and stories from brides who chose our gowns. From beach weddings to grand ballroom celebrations, each bride shares her experience of finding the perfect dress, working with our designers, and feeling beautiful on her special day. This collection is a tribute to love, joy, and unforgettable moments. Be inspired by their stories and envision yourself walking down the aisle in a gown that truly represents you.</p>
+		
+		<input type="checkbox" id="btn8">
+		<label for="btn8"></label>
+		
+	</div>
+
+</div>
+	<div class="ending">
+	<h1>bridal luxe</h1>
+		<div class="info">
+		<div class="block"><h2>explore</h2><p>Wedding Dresses</p> <p>Real Brides</p> <p> Our Collections</p></div>
+		<div class="block"> <h2>contact us </h2><p>Get In Touch </p> <p>08000000007 </p> <p>09000000000(Whatsapp) </p> <p>ifeomaring@gmail.com </p> <p> Victoria Island, Lagos</p></div>
+		<div class="block"><h2>	join the bridal squad</h2> <p>Exclusive moments</p> <p> from our special day </p> <div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
+					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
+	</div>
+	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
+
+
+	<script type="text/javascript" src="darkmode.js"></script>
+	<script type="text/javascript" src="bridal.js"></script>
+</body>
+</html>
