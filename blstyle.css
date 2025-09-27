@@ -1,22 +1,28 @@
 *{
 	box-sizing: border-box;
 }
-
-body {
+body{
 	font-family: Arial, sans-serif;
 	padding: 0;
 	margin: 0;
 	overflow-x: hidden;
-	background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(images/luxe26.jpg)center /cover no-repeat fixed;
-	
+	position: relative;
 }
-body.dark-mode{
-			background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),  url(images/luxe26.jpg)center /cover no-repeat fixed;
+body::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/luxe26.jpg)center /cover no-repeat;
+	z-index: -1;
+}
+body.dark-mode::before{
+	background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),  url(images/luxe26.jpg)center /cover no-repeat;
 			color: #f2f2f2;
-		}
-   
-
-		.navbar button{
+}
+.navbar button{
 	font-size: 13px;
 	padding: 7px 7px;
 	color: white;
@@ -285,12 +291,12 @@ section{
 	.slider .slides{
 		display: flex;
 		flex-wrap: nowrap;
-		width: 100%;
+		width: max-content;
 		height: 100%;
 		animation: slide 60s infinite alternate linear;
 	}
 	.slides img{
-		width: 100%;
+		width: auto;
 		height: 100%;
 		object-fit: cover;
 		margin-right: 10px;
@@ -300,7 +306,7 @@ section{
 			transform: translateX(0);
 		}
 		100%{
-			transform: translateX(-100%);
+			transform: translateX(calc(-100% + 100vw));
 		}
 	}
 	.newsletter{
