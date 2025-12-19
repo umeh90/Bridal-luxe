@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="blstyle.css">
 </head>
 <body>
+	<div class="preload"> <img src="images/luxe312.jpg" alt="Company logo"></div>
 	<header>
 	<nav class="navbar">
 		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
@@ -17,7 +18,9 @@
 		<li><a href="luxeabout.html">About</a></li>
 		<li><a href="luxeproject.html">project/portfolio</a></li>
 		<li><a href="luxecontact.html">contact</a></li>
-				<button id="dark-mode-toggle">Dark Mode</button>
+		<li><div class="cartshow" onclick="openCart()"><img src="images/cart1.png" alt="cart icon">
+		<span id="cartcount">0</span></div></li>
+		<button id="dark-mode-toggle">Dark Mode</button>
 		</ul>
 	</nav>
 </header>
@@ -49,7 +52,12 @@
 	</section>
 
 	<section class="trending-now"><h6>trending now <br> <span id="text11">Stay ahead of the curve with our curated selection of trending wedding gowns. from slick and modern to romantic and whimsical.
-		our collection features the latest style of design to make your wedding truely unforgettable. view our trending now and discover the perfect look for you. </span> </h6>
+		our collection features the latest style of design to make your wedding truely unforgettable. view our trending now and discover the perfect look for you. </span> <br>
+	<div class="movement">
+		<button id="previous"><img src="images/arrow2.png" alt="Previous Icon"></button>
+		<button id="next"><img src="images/arrow1.png" alt="Next icon"></button>
+	</div>
+</h6>
 		<div class="slider">
 			<div class="slides">
 				<img src="images/luxe2.jpg" alt="Bl gown">
@@ -84,11 +92,86 @@
 	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
 
 	</section>
+	<div class="cartslide">
+		<div class="cartheader">
+			<img src="images/cartadd4.jpeg" alt="dressicon" id="dressicon">
+			<button id="closebtn" onclick="closingTag()"><img src="images/closeup.png" alt="closingtag" class="imaging1">
+				 <p>Continue Shopping</p></button>
+		</div>
+		<h1 id="cartheading">bridal gown added to your cart</h1>
+		<div class="itemhead">
+		    <div></div>
+			<div class="text1">product</div>
+			<div class="text1">price</div>
+			<div class="text1">qty</div>
+			<div class="text1">total</div>
+			<div></div>
+		</div>
+		<div class="cart-items"></div>
+       <div class="cartfooter">
+		<img src="images/ring.jpeg" alt="ringicon" class="ringimg"> 
+		<div class="totals">
+			<div class="seperate">
+				<p><strong>SUBTOTAL</strong></p>
+				<p>$ <span id="subtotal">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>SHIPPING</strong></p>
+				<p> <span>Free</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TAX(7.5%)</strong></p>
+				<p>$ <span id="taxes">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TOTAL</strong></p>
+				<p>$ <span id="totaling">0</span></p>
+			</div>
+			<button class="btnending" onclick="checkOut()">
+				<div class="seperate">
+				<p><strong>Checkout</strong></p>
+				<p>$ <span id="endtotal">0</span></p>
+			</div>
+			</button>
+		</div>
+	   </div>
+	</div>
+	<script>
+		window.addEventListener('load', ()=>{
+			setTimeout(()=>{
+			document.body.classList.add('reload')
+			}, 1800)
+		})
+		</script>
+		<script>
+
+		const slides = document.querySelector('.slider .slides')
+		let position = 0
+		const container = document.querySelector('.slider')
+		function getMaximum(){
+			return -(slides.scrollWidth - container.offsetWidth);
+		}
+		
+		document.getElementById('next').addEventListener('click', ()=>{
+			let maxPosition = getMaximum()
+			if(position - 260 >= maxPosition){
+				position -= 260
+			slides.style.transform = `translateX(${position}px)`
+			}
+	})
+		document.getElementById('previous').addEventListener('click', ()=>{
+				if(position + 260 <= 0){
+					position += 260
+			slides.style.transform = `translateX(${position}px)`
+				}
+		})
+
+	</script>
 
 		<script src="bridal.js">
 	</script>
 	<script type="text/javascript" src="darkmode.js"></script>
-
+   <script src="cartpage.js"></script>
 
 
 

@@ -14,16 +14,31 @@
 		body{
 	padding: 0;
 	margin: 0;
-	font-family: Arial, sans-serif;
+	font-family:'Times New Roman', Times, serif;
 
 }
 body.dark-mode{
-			background-color: #333;
-			color: #f2f2f2;
+			background-color: #1a1a1a;
+			color: #f5f5f5;
 		}
-		.navbar button{
-	font-size: 13px;
-	padding: 7px 7px;
+body.dark-mode .navbar{
+	background-color: #222;
+}
+body.dark-mode .nav-links a{
+	color: #f5f5f5;
+}
+body.dark-mode .project{
+	background-color: #2b2b2b;
+	color: #f5f5f5;
+}
+body.dark-mode .display{
+	background-color: #333;
+	color: #f5f5f5;
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+.navbar button{
+	font-size: 11px;
+	height: 23px;
 	color: white;
 	border: none;
 	border-radius: 5px;
@@ -49,24 +64,53 @@ body.dark-mode{
 	list-style-type: none;
 	display: flex;
 	gap: 30px;
+	align-items: center;
+	padding: 0;
+	margin: 0;
 	
+}
+.cartshow{
+	position: relative;
+	cursor: pointer;
+}
+body.dark-mode .cartshow {
+	background-color: #f5f5f5;
+}
+.cartshow img{
+	width: auto;
+	height: 27px;
+	object-fit: cover;
+}
+.cartshow span{
+	position: absolute;
+	color: white;
+	right:4px;
+	top:-3px ;
+	font-weight: bold;
+	background-color: red;
+	padding:1px 3px;
+	font-size: 9px;
+	border-radius: 50%;
 }
 .nav-links a{
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
 	display: block;
 	text-align: center;
 	text-transform: uppercase;
-	color: sandybrown;
+	color: #444444;
 }
 .nav-links a:hover{
-	color: #ff6f61;
+	color: #b8860b;
 	transition: color 0.3s ease-in-out;
 }
 .nav-links a.active{
-	color:orange;
-	border-bottom: 2px solid gold;
+	color:#daa520;
+	border-bottom: 2px solid #daa520;
+}
+body.dark-mode .nav-links a.active{
+	border-bottom: 2px solid white;
 }
 .video-container{
 	position: relative;
@@ -83,7 +127,6 @@ body.dark-mode{
 	position: absolute;
 	top: 10%;
 	left: 0;
-	transform: translate(-50%, -50%);
 	color: white;
 	font-size: 60px;
 	font-weight: bold;
@@ -132,12 +175,15 @@ body.dark-mode{
 
 .display{
 	width: 30%;
-	background: white;
+	background: #ffffff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 20px;
 	text-align: center;
 	position: relative;
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+body.dark-mode .showcase{
+	background-color: #1a1a1a;
 }
 .display:hover{
 	transform: translateY(-15px);
@@ -160,12 +206,18 @@ body.dark-mode{
 	color: #202020;
 	display: inline;
 }
+body.dark-mode .original{
+	color: #f5f5f5;
+}
 .extra{
 	font-size: 1.2em;
 	color: #202020;
 	display: none;
 	text-align: center;
 
+}
+body.dark-mode .extra{
+	color: #f5f5f5;
 }
 input[type="checkbox"]{
 	height: 1.2em;
@@ -178,6 +230,9 @@ label{
 	cursor: pointer;
 	font-size: 1.2em;
 	font-weight: bold;
+}
+body.dark-mode label{
+	color: white;
 }
 label:before{
 	content: "Read More..";
@@ -242,6 +297,220 @@ input[type="checkbox"]:checked ~ label:before{
 		text-align: left;
 		font-size: 18px;
 	}
+	.cartslide{
+		background-color: #fafafa;
+		width: 70%;
+		height: 90%;
+		top: 5%;
+		left: 15%;
+		position: fixed;
+		z-index: 1000;
+		border-radius: 20px;
+		padding: 1%;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.06);
+		opacity: 0;
+		transform: scale(0);
+		transition: all 0.3s ease;
+	}
+	.cartslide.show{
+		opacity: 1;
+		transform: scale(1);
+	}
+	.cartheader{
+		display: flex;
+		justify-content: flex-end;
+		gap: 30%;
+	}
+	#dressicon{
+		width: auto;
+		height: 50px;
+		object-fit: cover;
+	}
+	#closebtn{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 35px;
+		background: #f5f5f5;
+		margin-top: 1.5%;
+		border: 1px solid #333;
+		cursor: pointer;
+		gap: 4px;
+		color: #333;
+	
+	}
+	#closebtn:hover{
+		background-color: #eeeeee;
+	}
+	 .imaging1{
+		width: auto;
+		height: 20px;
+		object-fit: cover;
+	}
+	#closebtn p{
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	#cartheading{
+		color: #333;
+		text-transform: capitalize;
+		text-align: center;
+		font-size: 1.7em;
+	}
+	.itemhead{
+		display: grid;
+		grid-template-columns: 15% 25% 12% 18% 12% 8%;
+		width: 100%;
+		align-items: center;
+		column-gap: 5px;
+		text-align: center;
+	}
+	.itemhead .text1{
+		text-transform: capitalize;
+		font-size: 1.0em;
+		color: #333;
+	}
+	.itemhead div{
+		text-align: center;
+	}
+	.cart-items{
+		overflow-y: auto;
+		flex: 1;
+	}
+	.cartfooter{
+		background-color: #c8a38c;
+		padding: 0 4px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: flex-start;
+		color: white;
+	}
+	.cartfooter .ringimg{
+		width: 13%;
+		height: 100%;
+		object-fit: cover;
+		max-width: 150px;
+		min-height: 80px;
+	}
+	.cartfooter .totals{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+	    gap: 6px;
+		font-size:0.5em;
+		font-weight: bold;
+		
+	}
+	.cartfooter .totals .seperate{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1px;
+		line-height: 1;
+		margin-top: 1px;
+		
+	}
+	.cartfooter .btnending{
+		margin-top: 2px;
+        padding: 1px 1px;
+		border-radius: 6px;
+		background-color: #b18f7b;
+		color: white;
+		border: none;
+		cursor: pointer;
+	}
+	.cartfooter .btnending .seperate{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.cartDisplay{
+			display: grid;
+		grid-template-columns: 15% 25% 12% 18% 12% 8%;
+		width: 100%;
+		align-items: center;
+		column-gap: 5px;
+		text-align: center;
+		margin-top: 5%;
+	}
+	.cartDisplay:nth-child(even){
+		background-color: #f0f0f0;;
+	}
+.proimage{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.product{
+	font-size: 15px;
+	font-weight: 500;
+	text-align: left !important;
+	margin-left: 5px;
+}
+.products{
+	font-size: 15px;
+	font-weight: 500;
+}
+.qtyalign{
+	display: flex;
+	flex-direction: row;
+	gap: 9px;
+	justify-content: center;
+	align-items: center;
+
+}
+.qtyalign span{
+	font-size: 15px;
+}
+.qtyalign button{
+	border: 2px solid black;
+	width: 30px;
+	height: 30px;
+}
+.deleteicon button{
+background: none;
+border: none;
+width: 30px;
+height: 30px;
+}
+.deleteicon button img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.cartDisplay div, 
+.cartDisplay span, 
+.cartDisplay button{
+	text-align: center;
+}
+body.dark-mode .cartslide{
+	background-color: #2b2b2b;
+	color: white;
+}
+body.dark-mode .text1{
+	color: white;
+}
+body.dark-mode .cartfooter{
+	background-color:#3b2f2f ;
+}
+body.dark-mode #cartheading{
+	color: white;
+}
+body.dark-mode .cartDisplay:nth-child(even){
+	background-color: #2f2f2f;
+}
+body.dark-mode .cartfooter .btnending{
+	background-color: #8f6f5c;
+}
+.mobile{
+	display: contents;
+}
+ @media screen and (min-width:1280px){
+	.cartfooter .ringimg{
+		width: 15%;
+	}
+ }
 @media screen and (max-width: 1279px) and (min-width:769px){
 	.navbar{
  		flex-direction: column;
@@ -307,7 +576,58 @@ input[type="checkbox"]:checked ~ label:before{
 		margin-top: 30px;
 		text-align: center;
 	}
-
+.cartslide{
+		width: 80%;
+		left: 10%;
+		padding: 1.5%;
+	}
+.itemhead,
+.cartDisplay{
+	grid-template-columns: 15% 25% 10% 18% 10% 8%;
+	column-gap: 4px;
+}
+.cartheader{
+		gap: 20%;
+	}
+	#dressicon{
+    height: 40px;
+	}
+	#closebtn{
+		height: 30px;
+	}
+	 .imaging1{
+		height: 15px;
+	}
+	#closebtn p{
+		font-size: 13px;
+	}
+	#cartheading{
+		font-size: 1.4em;
+	}
+	
+	.itemhead .text1{
+		font-size: 0.9em;
+	}
+	.cartfooter .ringimg{
+		width: 21%;
+	}
+	.cartfooter .totals{
+		font-size:0.5em;
+		
+	}
+.product{
+	font-size: 13px;
+}
+.products{
+	font-size: 13px;
+}
+.qtyalign span{
+	font-size: 13px;
+}
+.qtyalign button{
+	width: 25px;
+	height: 25px;
+}
 }
 @media screen and (max-width: 768px) and (min-width:481px){
  	.navbar{
@@ -328,8 +648,8 @@ input[type="checkbox"]:checked ~ label:before{
  		
  	}
  	.navbar button {
- 		font-size: 11px;
- 		padding: 5px 6px;
+ 		font-size: 8px;
+ 		height: 20px;
  	}
  	.video-container{
 	height: 400px;
@@ -404,17 +724,68 @@ label{
 	letter-spacing: 5px;
 
 	}
+.cartslide{
+		width: 90%;
+		left: 5%;
+	}
+	.itemhead,
+	.cartDisplay{
+		grid-template-columns:12% 22% 12% 20% 16% 8% ;
+		column-gap: 4px;
+	}
 
+.cartheader{
+		gap: 17%;
+	}
+	#dressicon{
+    height: 35px;
+	}
+	#closebtn{
+		height: 30px;
+	}
+	 .imaging1{
+		height: 13px;
+	}
+	#closebtn p{
+		font-size: 11px;
+	}
+	#cartheading{
+		font-size: 1.1em;
+	}
+	
+	.itemhead .text1{
+		font-size: 0.7em;
+	}
+	.cartfooter .ringimg{
+		width: 30%;
+	}
+	.cartfooter .totals{
+		font-size:0.5em;
+		width: 60%;
+		
+	}
+.product{
+	font-size: 10px;
+	font-weight: 300;
+}
+.products{
+	font-size: 10px;
+	font-weight: 300;
+}
+.qtyalign span{
+	font-size: 10px;
+}
+.qtyalign button{
+	width: 22px;
+	height: 22px;
+}
+
+ 
  }
  	@media screen and (max-width: 480px){
 	.navbar{
     	flex-direction: column;
     } 
-   
-    .navbar button{
-	font-size: 10px;
-	padding: 4px 6px;
-		}
 .nav-links{
 	gap: 10px;
 	height: 0;
@@ -428,9 +799,8 @@ label{
 	font-size: 14px;
 }
 .navbar button{
-	font-size: 10px;
-	padding: 2px 3px;
-	width: 70px;
+	font-size: 7px;
+	height: 17px;
 	margin: 0 auto;
 	
 	}
@@ -515,7 +885,79 @@ label{
 		font-size: 15px;
 	}
 
+.cartslide{
+		width: 95%;
+		left: 2.5%;
+		border-radius: 15px;
 
+	}
+	.itemhead{
+		display: none;
+	}
+	.cartDisplay{
+grid-template-columns: 1fr;
+text-align: left;
+row-gap: 10px;
+padding: 10px 0;
+	}
+	.mobile{
+     display: flex;
+	 justify-content: space-between;
+     align-items: center;
+	}
+	.cartheader{
+		justify-content: space-between;
+		gap: 0;
+	}
+	.proimage{
+	height: 250px;
+    width: 60%;
+	margin-right: 40%;
+}
+	#dressicon{
+    height: 29px;
+	}
+	#closebtn{
+		height: 23px;
+	}
+	.sizing{
+		margin-right: auto;
+	}
+	 .imaging1{
+		height: 9px;
+	}
+	#closebtn p{
+		font-size: 8px;
+	}
+	#cartheading{
+		font-size: 0.9em;
+	}
+	
+	
+	.cartfooter .ringimg{
+		width: 31%;
+	}
+	.cartfooter .totals{
+		font-size:0.4em;
+		width: 60%;
+		
+	}
+.product{
+	font-size: 15px;
+	font-weight: 300;
+}
+.products{
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.qtyalign span{
+	font-size: 15px;
+}
+.qtyalign button{
+	width: 25px;
+	height: 25px;
+}
 }
 
 
@@ -523,6 +965,50 @@ label{
 </style>
 </head>
 <body>
+	<div class="cartslide">
+		<div class="cartheader">
+			<img src="images/cartadd4.jpeg" alt="dressicon" id="dressicon">
+			<button id="closebtn" onclick="closingTag()"><img src="images/closeup.png" alt="closingtag" class="imaging1">
+				 <p>Continue Shopping</p></button>
+		</div>
+		<h1 id="cartheading">bridal gown added to your cart</h1>
+		<div class="itemhead">
+		    <div></div>
+			<div class="text1">product</div>
+			<div class="text1">price</div>
+			<div class="text1">qty</div>
+			<div class="text1">total</div>
+			<div></div>
+		</div>
+		<div class="cart-items"></div>
+       <div class="cartfooter">
+		<img src="images/ring.jpeg" alt="ringicon" class="ringimg"> 
+		<div class="totals">
+			<div class="seperate">
+				<p><strong>SUBTOTAL</strong></p>
+				<p>$ <span id="subtotal">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>SHIPPING</strong></p>
+				<p> <span>Free</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TAX(7.5%)</strong></p>
+				<p>$ <span id="taxes">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TOTAL</strong></p>
+				<p>$ <span id="totaling">0</span></p>
+			</div>
+			<button class="btnending" onclick="checkOut()">
+				<div class="seperate">
+				<p><strong>Checkout</strong></p>
+				<p>$ <span id="endtotal">0</span></p>
+			</div>
+			</button>
+		</div>
+	   </div>
+	</div>
 	<header>
 		<nav class="navbar">
 		<div class="logo"> <img src="images/luxe312.jpg" alt="Bl logo"> </div>
@@ -532,6 +1018,8 @@ label{
 		<li><a href="luxeabout.html">About</a></li>
 		<li><a href="luxeproject.html" class="active">project/portfolio</a></li>
 		<li><a href="luxecontact.html">contact</a></li>
+		<li><div class="cartshow" onclick="openCart()"><img src="images/cart.png" alt="cart icon">
+		<span id="cartcount">0</span></div></li>
 				<button id="dark-mode-toggle">Dark Mode</button>
 		</ul>
 	</nav>
@@ -651,5 +1139,6 @@ label{
 
 	<script type="text/javascript" src="darkmode.js"></script>
 	<script type="text/javascript" src="bridal.js"></script>
+	<script src="cartpage.js"></script>
 </body>
 </html>

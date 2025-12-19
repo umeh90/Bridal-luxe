@@ -14,25 +14,32 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Arial, sans-serif;
-	background: linear-gradient(to bottom,grey, mintcream) ;
+	font-family:'Times New Roman', Times, serif;
+	background: #ffffff;
+	color: #222222;
 }
 body.dark-mode{
-			background:linear-gradient(to bottom, #333333, #555555);
-			color: #f2f2f2;
-		}
-	.navbar button{
-	font-size: 13px;
-	padding: 7px 7px;
+		background: #1a1a1a;
+	}
+body.dark-mode .navbar{
+	background-color: #222;
+}
+body.dark-mode .cartshow {
+	background-color: #f5f5f5;
+}
+
+.navbar button{
+	font-size: 9px;
+	height: 23px;
 	color: white;
 	border: none;
 	border-radius: 5px;
 	text-transform: uppercase;
-	background-color: #ff6f61;
+	background-color: #c8a38c;
 	transition: 0.3s ease;
 		}
 	.navbar button:hover{
-			background-color: #e65a50;
+			background-color: #b18f7b;
 		}
 	.navbar{
 	display: flex;
@@ -40,28 +47,54 @@ body.dark-mode{
 	align-items: center;
 	width: 100%;
 	top: 0;
-	
-	
+	background-color: #f8f8f8;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+	padding: 0 5px;
 }
-
+.cartshow{
+	position: relative;
+	cursor: pointer;
+}
+.cartshow img{
+	width: auto;
+	height: 27px;
+	object-fit: cover;
+}
+.cartshow span{
+	position: absolute;
+	color: white;
+	font-size: 9px;
+	right: 4px;
+	top: -3px;
+	font-weight: bold;
+	background-color: #d32f2f;
+	border-radius: 50%;
+	padding: 1px 3px;
+}
 
 .nav-links{
 	list-style-type: none;
 	display: flex;
 	gap: 30px;
+	align-items: center;
+	padding: 0;
+	margin: 0;
 	
 }
 .nav-links a{
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: uppercase;
-	color:  #ffd700;
+	color:  #444;
 	display: block;
 	text-align: center;
-	font-size: 20px;
+	font-size: 16px;
+}
+body.dark-mode .nav-links a{
+	color: white;
 }
 .nav-links a:hover{
-	color: #ff6ff1;
+	color: #c8a38c;
 }
 .clipimage{
 	clip-path: polygon(50% 0%, 100% 50%, 50% 100% ,0% 50%);
@@ -71,48 +104,86 @@ body.dark-mode{
 	background-size: cover;
 }
 .naming{
-	font-size: 30px;
+	font-size: 2.2em;
 	text-transform: uppercase;
-	margin-bottom: 20px;
-
+    text-align: center;
+	color: #222;
+	font-weight: 300;
+	text-shadow: 0, 0, 0, 0.15;
+	margin-top: 6%;
+	letter-spacing: 5px;
+	margin: 60px 0 30px 0;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 10px;
+}
+body.dark-mode .naming{
 	color: white;
-	text-shadow: 0 0 5px;
-	padding: 0 2%;
 }
 .imagery{
 	display: flex;
 	justify-content: center;
 	width: 90%;
-	margin: 0 5%;
+	margin: 30px 5% 40px;
+	gap: 1%;
 
 }
 .collection{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
-	width: 96%;
-	margin: 0 2%;
-
+	margin: 0 5%;
+	flex-wrap: wrap;
+	width: 90%;
 }
 .collection .imaging{
-	width: 32%;
-	text-align: center;
-	
+	width: 30%;
+text-align: center;
+margin-bottom: 40px;
+padding: 15px;
+background-color: #fff;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+transition: box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
 }
+body.dark-mode .collection .imaging{
+	background-color: #2b2b2b;
+}
+.collection .imaging:hover{
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 .collection .imaging img{
 	width: 100%;
 	object-fit:cover ;
-	height: 400px;
+	height: 350px;
+	display: block;
+	margin-top: 10px;
 }
 .collection .imaging .description{
-	font-size: 18px;
-	color: #ffc67d;
-
+	font-size: 0.9em;
+	color: #333;
+	margin: 5px 0;
+	margin-top: 2px;
+	letter-spacing: 0.5px;
+	text-align: left;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+body.dark-mode .collection .imaging .description{
+	color: white;
 }
 .collection .imaging .price{
-	color: #ffd700;
-	font-weight: bold;
-	font-size: 20px;
+	color: #c8a38c;
+	font-weight: 500;
+	font-size: 0.8em;
+	text-align: left;
+	margin: 0;
+}
+body.dark-mode .collection .imaging .price{
+	color: white;
 }
 	.ending{
 		text-align: center;
@@ -120,7 +191,8 @@ body.dark-mode{
 		border-top: 2px solid #151515;
 		margin-top: 20%;
 		padding: 0 2%;
-		background-color:#202020 ;
+		background-color:#202020;
+		margin-top: 10%;
 	
 	}
 	.ending h1{
@@ -134,6 +206,58 @@ body.dark-mode{
 		display: flex;
 		justify-content: space-between;
 
+	}
+	.sizebtn{
+     display: flex;
+	 gap: 5px;
+	 margin: 5px 0;
+	}
+	.btnsize{
+		border-radius: 50%;
+		height: 25px;
+		width: 27px;
+		padding: 2px 2px;
+		font-size: 0.5em;
+		font-weight: bold;
+		color: #333;
+		background-color: white;
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 2px solid #ccc;
+		transition: all 0.3s ease;
+	}
+	body.dark-mode .btnsize{
+		background-color: #c8a38c;
+		color: white;
+	}
+	.btnsize:hover{
+		border-color: #999;
+	}
+	.btnsize.activity{
+		border-color: #ff8c8c;
+		background-color: #ffecec;
+	}
+	.cartbtn{
+		display: flex;
+		justify-content: center;
+		margin: 6px 0;
+	}
+	.cartbtndes{
+		width: 70%;
+	padding: 4px 4px;
+	text-transform: capitalize;
+	font-weight: 600;
+	background-color:#c8a38c ;
+	color: white;
+	border: 2px solid #b59376;
+	letter-spacing: 1px;
+	font-size: 16px;
+	cursor: pointer;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+	}
+	.cartbtndes:hover{
+		background-color: #b18f7b;
 	}
 	.ending .info .block{
 		width: 32%;
@@ -163,7 +287,223 @@ body.dark-mode{
 		font-size: 18px;
 
 	}
-	@media screen and (max-width: 1279px) and (min-width:769px){
+.cartslide{
+		background-color: #fafafa;
+		width: 70%;
+		height: 90%;
+		top: 5%;
+		left: 15%;
+		position: fixed;
+		z-index: 1000;
+		border-radius: 20px;
+		padding: 1%;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.06);
+		opacity: 0;
+		transform: scale(0);
+		transition: all 0.3s ease;
+	}
+	.cartslide.show{
+		opacity: 1;
+		transform: scale(1);
+	}
+	.cartheader{
+		display: flex;
+		justify-content: flex-end;
+		gap: 30%;
+	}
+	#dressicon{
+		width: auto;
+		height: 50px;
+		object-fit: cover;
+	}
+	#closebtn{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 35px;
+		background: #f5f5f5;
+		margin-top: 1.5%;
+		border: 1px solid #333;
+		cursor: pointer;
+		gap: 4px;
+		color: #333;
+	
+	}
+	#closebtn:hover{
+		background-color: #eeeeee;
+	}
+	 .imaging1{
+		width: auto;
+		height: 20px;
+		object-fit: cover;
+	}
+	#closebtn p{
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	#cartheading{
+		color: #333;
+		text-transform: capitalize;
+		text-align: center;
+		font-size: 1.7em;
+	}
+	.itemhead{
+		display: grid;
+		grid-template-columns: 15% 25% 12% 18% 12% 8%;
+		width: 100%;
+		align-items: center;
+		column-gap: 5px;
+		text-align: center;
+	}
+	.itemhead .text1{
+		text-transform: capitalize;
+		font-size: 1.0em;
+		color: #333;
+	}
+	.itemhead div{
+		text-align: center;
+	}
+	.cart-items{
+		overflow-y: auto;
+		flex: 1;
+	}
+	.cartfooter{
+		background-color: #c8a38c;
+		padding: 0 4px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: flex-start;
+		color: white;
+	}
+	.cartfooter .ringimg{
+		width: 13%;
+		height: 100%;
+		object-fit: cover;
+		max-width: 150px;
+		min-height: 80px;
+	}
+	.cartfooter .totals{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+	    gap: 6px;
+		font-size:0.5em;
+		font-weight: bold;
+		
+	}
+	.cartfooter .totals .seperate{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1px;
+		line-height: 1;
+		margin-top: 1px;
+		
+	}
+	.cartfooter .btnending{
+		margin-top: 2px;
+        padding: 1px 1px;
+		border-radius: 6px;
+		background-color: #b18f7b;
+		color: white;
+		border: none;
+		cursor: pointer;
+	}
+	.cartfooter .btnending .seperate{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.cartDisplay{
+			display: grid;
+		grid-template-columns: 15% 25% 12% 18% 12% 8%;
+		width: 100%;
+		align-items: center;
+		column-gap: 5px;
+		text-align: center;
+		margin-top: 5%;
+	}
+	.cartDisplay:nth-child(even){
+		background-color: #f0f0f0;;
+	}
+.proimage{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.product{
+	font-size: 15px;
+	font-weight: 500;
+	text-align: left !important;
+	margin-left: 5px;
+}
+.products{
+	font-size: 15px;
+	font-weight: 500;
+}
+.qtyalign{
+	display: flex;
+	flex-direction: row;
+	gap: 9px;
+	justify-content: center;
+	align-items: center;
+
+}
+.qtyalign span{
+	font-size: 15px;
+}
+.qtyalign button{
+	border: 2px solid black;
+	width: 30px;
+	height: 30px;
+}
+.deleteicon button{
+background: none;
+border: none;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+.deleteicon button img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.cartDisplay div, 
+.cartDisplay span, 
+.cartDisplay button{
+	text-align: center;
+}
+body.dark-mode .cartslide{
+	background-color: #2b2b2b;
+	color: white;
+}
+body.dark-mode .text1{
+	color: white;
+}
+body.dark-mode .cartfooter{
+	background-color:#3b2f2f ;
+}
+body.dark-mode #cartheading{
+	color: white;
+}
+body.dark-mode .cartDisplay:nth-child(even){
+	background-color: #2f2f2f;
+}
+body.dark-mode .cartfooter .btnending{
+	background-color: #8f6f5c;
+}
+.mobile{
+	display: contents;
+}
+
+ @media screen and (min-width:1280px){
+	.cartfooter .ringimg{
+		width: 15%;
+	}
+ }
+ @media screen and (max-width: 1279px) and (min-width:769px){
  	.navbar{
  		flex-direction: column;
  		text-align: center;
@@ -201,6 +541,74 @@ body.dark-mode{
 		margin-top: 30px;
 		text-align: center;
 	}
+	.btnsize{
+		height: 24px;
+		width: 26px;
+		padding: 2px 2px;
+		font-size: 0.5em;
+	}
+	.cartbtndes{
+	font-size: 14px;
+	}
+	.collection .imaging .description{
+	font-size: 0.8em;
+}
+.collection .imaging .price{
+	font-size: 0.7em;
+}
+.cartslide{
+		width: 80%;
+		left: 10%;
+		padding: 1.5%;
+	}
+.itemhead,
+.cartDisplay{
+	grid-template-columns: 15% 25% 10% 18% 10% 8%;
+	column-gap: 4px;
+}
+.cartheader{
+		gap: 20%;
+	}
+	#dressicon{
+    height: 40px;
+	}
+	#closebtn{
+		height: 30px;
+	}
+	 .imaging1{
+		height: 15px;
+	}
+	#closebtn p{
+		font-size: 13px;
+	}
+	#cartheading{
+		font-size: 1.4em;
+	}
+	
+	.itemhead .text1{
+		font-size: 0.9em;
+	}
+	.cartfooter .ringimg{
+		width: 21%;
+	}
+	.cartfooter .totals{
+		font-size:0.5em;
+		
+	}
+.product{
+	font-size: 13px;
+}
+.products{
+	font-size: 13px;
+}
+.qtyalign span{
+	font-size: 13px;
+}
+.qtyalign button{
+	width: 25px;
+	height: 25px;
+}
+
  }
  @media screen and (max-width: 768px) and (min-width:481px){
  	.navbar{
@@ -221,8 +629,8 @@ body.dark-mode{
  		
  	}
  	.navbar button {
- 		font-size: 11px;
- 		padding: 5px 6px;
+ 		font-size: 8px;
+ 		height: 20px;
  	}
  	.clipimage{
 	height: 200px;
@@ -239,7 +647,7 @@ body.dark-mode{
 	font-size: 23px;
 }
 .collection .imaging{
-	width: 48%;	
+	width: 45%;	
 }
 
 .collection .imaging img{
@@ -269,7 +677,79 @@ body.dark-mode{
 		font-size: 20px;
 
 	}
+	.btnsize{
+		height: 22px;
+		width: 24px;
+		padding: 2px 2px;
+		font-size: 0.5em;
+	}
+	.cartbtndes{
+	font-size: 13px;
+	}
+	.collection .imaging .description{
+	font-size: 0.7em;
+}
+.collection .imaging .price{
+	font-size: 0.6em;
+}
 
+.cartslide{
+		width: 90%;
+		left: 5%;
+	}
+	.itemhead,
+	.cartDisplay{
+		grid-template-columns:12% 22% 12% 20% 16% 8% ;
+		column-gap: 4px;
+	}
+
+.cartheader{
+		gap: 17%;
+	}
+	#dressicon{
+    height: 35px;
+	}
+	#closebtn{
+		height: 30px;
+	}
+	 .imaging1{
+		height: 13px;
+	}
+	#closebtn p{
+		font-size: 11px;
+	}
+	#cartheading{
+		font-size: 1.1em;
+	}
+	
+	.itemhead .text1{
+		font-size: 0.7em;
+	}
+	.cartfooter .ringimg{
+		width: 30%;
+	}
+	.cartfooter .totals{
+		font-size:0.5em;
+		width: 60%;
+		
+	}
+.product{
+	font-size: 10px;
+	font-weight: 300;
+}
+.products{
+	font-size: 10px;
+	font-weight: 300;
+}
+.qtyalign span{
+	font-size: 10px;
+}
+.qtyalign button{
+	width: 22px;
+	height: 22px;
+}
+
+ 
 
  }
 
@@ -277,11 +757,6 @@ body.dark-mode{
       	.navbar{
     	flex-direction: column;
     } 
-   
-    .navbar button{
-	font-size: 10px;
-	padding: 4px 6px;
-		}
 .nav-links{
 	gap: 10px;
 	height: 0;
@@ -295,9 +770,8 @@ body.dark-mode{
 	font-size: 14px;
 }
 .navbar button{
-	font-size: 10px;
-	padding: 2px 3px;
-	width: 70px;
+	font-size: 7px;
+	height: 17px;
 	margin: 0 auto;
 	
 	}
@@ -325,21 +799,33 @@ body.dark-mode{
 	font-size: 18px;
 }
 .collection .imaging{
-	width: 48%;	
+	width: 45%;	
 }
 
 .collection .imaging img{
 	height: 180px;
 }
 .collection .imaging .description{
-	font-size: 13px;
+	font-size: 0.6em;
 
 }
 .collection .imaging .price{
-	color: #ffd700;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 0.5em;
 }
+.btnsize{
+		height: 18px;
+		width: 22px;
+		padding: 1px 1px;
+		font-size: 0.4em;
+	}
+	.cartbtndes{
+	font-size:11px;
+	padding: 2px 2px;
+	}
+	.sizebtn{
+	 gap: 4px;
+	}
 .ending .info{
 		display: flex;
 		flex-direction: column;
@@ -364,7 +850,79 @@ body.dark-mode{
 		font-size: 15px;
 
 	}
+	.cartslide{
+		width: 95%;
+		left: 2.5%;
+		border-radius: 15px;
 
+	}
+	.itemhead{
+		display: none;
+	}
+	.cartDisplay{
+grid-template-columns: 1fr;
+text-align: left;
+row-gap: 10px;
+padding: 10px 0;
+	}
+	.mobile{
+     display: flex;
+	 justify-content: space-between;
+     align-items: center;
+	}
+	.cartheader{
+		justify-content: space-between;
+		gap: 0;
+	}
+	.proimage{
+	height: 250px;
+    width: 60%;
+	margin-right: 40%;
+}
+	#dressicon{
+    height: 29px;
+	}
+	#closebtn{
+		height: 23px;
+	}
+	.sizing{
+		margin-right: auto;
+	}
+	 .imaging1{
+		height: 9px;
+	}
+	#closebtn p{
+		font-size: 8px;
+	}
+	#cartheading{
+		font-size: 0.9em;
+	}
+	
+	
+	.cartfooter .ringimg{
+		width: 31%;
+	}
+	.cartfooter .totals{
+		font-size:0.4em;
+		width: 60%;
+		
+	}
+.product{
+	font-size: 15px;
+	font-weight: 300;
+}
+.products{
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.qtyalign span{
+	font-size: 15px;
+}
+.qtyalign button{
+	width: 25px;
+	height: 25px;
+}
 }
 
 
@@ -380,6 +938,8 @@ body.dark-mode{
 		<li><a href="luxeabout.html">About</a></li>
 		<li><a href="luxeproject.html">project/portfolio</a></li>
 		<li><a href="luxecontact.html">contact</a></li>
+		<li><div class="cartshow" onclick="openCart()"><img src="images/cart.png" alt="cart icon">
+		<span id="cartcount">0</span></div></li>
 		<button id="dark-mode-toggle">Dark Mode</button>
 		</ul>
 	</nav>
@@ -392,25 +952,141 @@ body.dark-mode{
 </div>
 <div class="naming">bridal luxe ball collection</div>
 <div class="collection">
-	<div class="imaging"><img src="images/luxe1.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$39,000.00</p></div>
-	<div class="imaging"><img src="images/luxe14.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$49,000.00</p></div>
-	<div class="imaging"><img src="images/luxe5.jpg"> <p class="description">Elegant and Classy</p> <p class="price">$20,000.00</p></div>
-	<div class="imaging"><img src="images/luxe11.webp"> <p class="description">stylish and Classy</p> <p class="price">$19,000.00</p></div>
-	<div class="imaging"><img src="images/luxe20.jpeg"> <p class="description">Sophisticated and Classy</p> <p class="price">$29,000.00</p></div>
-	<div class="imaging"><img src="images/luxe17.jpg"> <p class="description">Elegant and Bold</p> <p class="price">$39,000.00</p></div>
+	<div class="imaging"><img src="images/luxe1.jpg"> <p class="description">luna <br> stunningly sculpted design <br> select size:</p> 
+     <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize"onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+	<p class="price">$35,0000</p>
+<div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe1.jpg', 'Luna', 35000)">add to cart</button></div></div>
+	
+	<div class="imaging"><img src="images/luxe14.jpg"> <p class="description">elise <br> romantic and voluminous<br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+	<p class="price">$28,000</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe14.jpg', 'Elise', 28000)">add to cart </button> </div></div>
+	<div class="imaging"><img src="images/luxe5.jpg"> <p class="description">clara <br> exquisite regal feel <br> select size:</p> 
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div><p class="price">$20,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe5.jpg', 'Clara', 20000)">add to cart</button></div>
+	</div>
+	<div class="imaging"><img src="images/luxe11.webp"> <p class="description">noelle <br>gracefully suspended <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+	 <p class="price">$19,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe11.webp', 'Noelle',19000 )">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe20.jpeg"> <p class="description">belle <br> high-impact silhouette <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+	<p class="price">$29,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe20.jpeg', 'Belle', 29000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe17.jpg"> <p class="description">grace <br> refined sophistication <br> select size:</p>
+		<div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+		 <p class="price">$39,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe17.jpg', 'Grace', 39000)">add to cart</button></div></div>
 	
 </div>
-<div class="naming" style=" margin-top: 20px;"> bridal luxe slim fit collection</div>
+<div class="naming"> bridal luxe slim fit collection</div>
 <div class="collection">
-	<div class="imaging"><img src="images/luxe3.webp"> <p class="description">Elegant and Classy</p> <p class="price">$25,000.00</p></div>
-	<div class="imaging"><img src="images/luxe4.webp"> <p class="description">Elegant and Classy</p> <p class="price">$26,000.00</p></div>
-	<div class="imaging"><img src="images/luxe6.webp"> <p class="description">Elegant and Classy</p> <p class="price">$19,000.00</p></div>
-	<div class="imaging"><img src="images/luxe7.webp"> <p class="description">stylish and Classy</p> <p class="price">$29,000.00</p></div>
-	<div class="imaging"><img src="images/luxe9.webp"> <p class="description">Sophisticated and Classy</p> <p class="price">$49,000.00</p></div>
-	<div class="imaging"><img src="images/luxe10.webp"> <p class="description">Elegant and Bold</p> <p class="price">$24,000.00</p></div>
-	<div class="imaging"><img src="images/luxe18.jpeg"> <p class="description">Elegant and Bold</p> <p class="price">$25,000.00</p></div>
-	<div class="imaging"><img src="images/luxe30.jpg"> <p class="description">Elegant and Bold</p> <p class="price">$26,000.00</p></div>
-	<div class="imaging"><img src="images/luxe12.webp"> <p class="description">Elegant and Bold</p> <p class="price">$30,000.00</p></div>
+	<div class="imaging"><img src="images/luxe3.webp"> <p class="description">isla  <br>modern designs, clean lines <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+		<p class="price">$25,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe3.webp', 'Isla', 25000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe4.webp"> <p class="description">aurora <br>sleek and effortless beauty <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+		 <p class="price">$26,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe4.webp', 'Aurora', 26000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe6.webp"> <p class="description">hazel <br>delicate patterning <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div>
+		 <p class="price">$19,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe6.webp','Hazel', 19000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe7.webp"> <p class="description">blair <br>blushing grace with striking appeal <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div> <p class="price">$29,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe7.webp', 'Blair', 29000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe9.webp"> <p class="description">sienna <br> exquisite lines with endless drama <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div> <p class="price">$49,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe9.webp', 'Sienna', 49000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe10.webp"> <p class="description">ruby <br> sculpted to fit with elegant round movement 
+		<br> select size:</p> <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div> <p class="price">$24,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe10.webp', 'Ruby', 24000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe18.jpeg"> <p class="description">ivy <br>perfectly made with stunning rear view
+	<br> select size:</p>  <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div><p class="price">$25,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe18.jpeg', 'Ivy', 25000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe30.jpg"> <p class="description">chloe <br>precision fit <br> select size:</p> 
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div><p class="price">$26,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe30.jpg', 'Chloe', 26000)">add to cart</button></div></div>
+	<div class="imaging"><img src="images/luxe12.webp"> <p class="description">tess <br>tapered form <br> select size:</p>
+		 <div class="sizebtn">
+		<button class="btnsize" onclick="selectBtn( this, 'S')">S</button>
+		<button class="btnsize"onclick="selectBtn( this, 'M')">M</button>
+		<button class="btnsize" onclick="selectBtn( this, 'L')">L</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XL')">XL</button>
+		<button class="btnsize" onclick="selectBtn( this, 'XXL')">XXL</button>
+	 </div> <p class="price">$30,000.00</p><div class="cartbtn"><button class="cartbtndes" onclick="addToCart('images/luxe12.webp', 'Tess',30000)">add to cart</button></div></div>
 	</div>
 	<div class="ending">
 	<h1>bridal luxe</h1>
@@ -420,10 +1096,61 @@ body.dark-mode{
 		<div class="block"><h2>	join the bridal squad</h2> <p>Exclusive moments</p> <p> from our special day </p> <div class="social"> <li><a href="fb://"><img src="images/face.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li>
 					<li><a href="twitter://"><img src="images/x.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li><li><a href="instagram://"><img src="images/instagram.jpg" alt="socialmedia icon" style="width: 30px; height: 30px; border-radius: 50%;"></a></li></div></div>
 	</div>
-	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div>
-
-			<script src="bridal.js">
+	<div class="copyright">&copy;2025[Bridal Luxe inc] All rights reserved.</div></div>
+	
+    <div class="cartslide">
+		<div class="cartheader">
+			<img src="images/cartadd4.jpeg" alt="dressicon" id="dressicon">
+			<button id="closebtn" onclick="closingTag()"><img src="images/closeup.png" alt="closingtag" class="imaging1">
+				 <p>Continue Shopping</p></button>
+		</div>
+		<h1 id="cartheading">bridal gown added to your cart</h1>
+		<div class="itemhead">
+		    <div></div>
+			<div class="text1">product</div>
+			<div class="text1">price</div>
+			<div class="text1">qty</div>
+			<div class="text1">total</div>
+			<div></div>
+		</div>
+		<div class="cart-items"></div>
+       <div class="cartfooter">
+		<img src="images/ring.jpeg" alt="ringicon" class="ringimg"> 
+		<div class="totals">
+			<div class="seperate">
+				<p><strong>SUBTOTAL</strong></p>
+				<p>$ <span id="subtotal">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>SHIPPING</strong></p>
+				<p> <span>Free</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TAX(7.5%)</strong></p>
+				<p>$ <span id="taxes">0</span></p>
+			</div>
+			<div class="seperate">
+				<p><strong>TOTAL</strong></p>
+				<p>$ <span id="totaling">0</span></p>
+			</div>
+			<button class="btnending" onclick="checkOut()">
+				<div class="seperate">
+				<p><strong>Checkout</strong></p>
+				<p>$ <span id="endtotal">0</span></p>
+			</div>
+			</button>
+		</div>
+	   </div>
+	</div>
+	
+	
+	<script src="bridal.js">
 	</script>
 	<script type="text/javascript" src="darkmode.js"></script>
+	<script src="cartpage.js"></script>
+	
 </body>
 </html>
+
+
+
