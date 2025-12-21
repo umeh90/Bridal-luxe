@@ -21,12 +21,17 @@ let cart = JSON.parse(localStorage.getItem('cartContent')) || []
  }
  let itemSize;
 function selectBtn(button, size){
-    itemSize = size;
+    
     const product = button.closest('.sizebtn')
     const sizes = product.querySelectorAll('.btnsize')
+    if(button.classList.contains('activity')){
+      button.classList.remove('activity')
+      itemSize = null
+      return 
+    }
     sizes.forEach(item => item.classList.remove('activity'));
     button.classList.add('activity')
-    
+    itemSize = size;
  }
  function resetSelectedSize(){
    const sizing = document.querySelectorAll('.btnsize')
@@ -121,10 +126,16 @@ function selectBtn(button, size){
 saveCart()
 renderCart()
  }
+ function resetSize() {
+   const sizing1 = document.querySelectorAll('.btnsize')
+   sizing1.forEach(item => item.classList.remove('activity'))
+   itemSize = null
+ }
  function checkOut(){
    alert('Thankyou for shopping with us')
    localStorage.removeItem('cartContent')
    cart = []
+   resetSize()
    saveCart()
    renderCart()
  }
